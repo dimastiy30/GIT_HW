@@ -1,0 +1,201 @@
+1. На локальном репозитории сделать ветки для:
+- Postman
+- Jmeter
+- CheckLists
+- Bag Reports
+- SQL
+- Charles
+- Mobile testing
+
+
+Димон@KOMPUTER MINGW64 /e/GitBASCH_group_QA_30/group_30 (main)
+$ git branch Mobiletesting
+.
+.
+.
+.
+.
+и так далее, создаем ветки.
+
+По итогу получем-
+Димон@KOMPUTER MINGW64 /e/GitBASCH_group_QA_30/group_30 (main)
+$ git branch
+  BagReports
+  Charles
+  CheckLists
+  Jmeter
+  Mobiletesting
+  Postman
+  SQL
+* main
+
+2. Запушить все ветки на внешний репозиторий
+
+Димон@KOMPUTER MINGW64 /e/GitBASCH_group_QA_30/group_30 (main)
+$ git push main
+
+Димон@KOMPUTER MINGW64 /e/GitBASCH_group_QA_30/group_30 (main)
+$ git push -u origin Jmeter
+
+Димон@KOMPUTER MINGW64 /e/GitBASCH_group_QA_30/group_30 (main)
+$ git push -u origin CheckLists
+
+Димон@KOMPUTER MINGW64 /e/GitBASCH_group_QA_30/group_30 (main)
+$ git push -u origin BagReports
+
+Димон@KOMPUTER MINGW64 /e/GitBASCH_group_QA_30/group_30 (main)
+$ git push -u origin SQL
+
+Димон@KOMPUTER MINGW64 /e/GitBASCH_group_QA_30/group_30 (main)
+$ git push -u origin Charles
+
+Димон@KOMPUTER MINGW64 /e/GitBASCH_group_QA_30/group_30 (main)
+$ git push -u origin Mobiletesting
+
+
+3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
+
+Димон@KOMPUTER MINGW64 /e/GitBASCH_group_QA_30/group_30 (main)
+$ git checkout BagReports
+
+Димон@KOMPUTER MINGW64 /e/GitBASCH_group_QA_30/group_30 (BagReports)
+$ cat > bagreport.txt
+Telegram nickname: @JohnnyShwarts
+Bug_id: 44
+Title: Dotted lines not showing
+Severity: Major
+Priority: high
+Environment: 1) Redmi note 7 /MIUI 12.5.3
+Precondition: widget on the screen with sizes 5x6 and 4x6, text size (L, xxs, xxl)
+STR: long press button (for possible screen transformation)
+AR: Neither side displays dotted lines (when stretched across the screen)
+ER: Dotted lines are visible on the edges
+
+4. Запушить структуру багрепорта на внешний репозиторий
+
+Димон@KOMPUTER MINGW64 /e/GitBASCH_group_QA_30/group_30 (BagReports)
+$ git add bagreport.txt
+
+Димон@KOMPUTER MINGW64 /e/GitBASCH_group_QA_30/group_30 (BagReports)
+$ git commit -m "new fail"
+[BagReports 89356af] new fail
+ 1 file changed, 9 insertions(+)
+ create mode 100644 bagreport.txt
+
+Димон@KOMPUTER MINGW64 /e/GitBASCH_group_QA_30/group_30 (BagReports)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 537 bytes | 537.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/dimastiy30/group_30.git
+   cd544b1..89356af  BagReports -> BagReports
+
+
+5. Вмержить ветку Bag Reports в Main
+
+Димон@KOMPUTER MINGW64 /e/GitBASCH_group_QA_30/group_30 (main)
+$ git merge BagReports -m "add file"
+Merge made by the 'ort' strategy.
+ bagreport.txt | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+ create mode 100644 bagreport.txt
+
+6. Запушить main на внешний репозиторий.
+
+Димон@KOMPUTER MINGW64 /e/GitBASCH_group_QA_30/group_30 (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 324 bytes | 324.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/dimastiy30/group_30.git
+   cd544b1..c46e8f6  main -> main
+
+
+7. В ветке CheckLists набросать структуру чек листа.
+
+Димон@KOMPUTER MINGW64 /e/GitBASCH_group_QA_30/group_30 (CheckLists)
+$ vim checklist.txt
+Сайт открывается и доступен.
+При попытке повторно открыть сайт, он открывается и доступен.
+Все кнопки на сайте нажимаются.
+Все ссылки на сайте открываются.
+На сайте нет битых ссылок.
+Проверить все формы на сайте.
+Проверить валидацию всех обязательных полей.
+Знак звездочки есть у всех обязательных полей.
+Проверить валидацию для всех необязательных полей.
+Проверить основные элементы сайта.
+Проверить работу меню.
+Проверить, что загруженные документы открываются правильно.
+Отправка форм работает корректно.
+Проверить, что будет, если удалить куки, находясь на сайте.
+Проверить, что будет, если удалить куки после посещения сайта.
+Все данные в списках в хронологическом порядке
+
+
+8. Запушить структуру на внешний репозиторий
+
+Димон@KOMPUTER MINGW64 /e/GitBASCH_group_QA_30/group_30 (CheckLists)
+$ git add .
+warning: LF will be replaced by CRLF in checklist.txt.
+The file will have its original line endings in your working directory
+
+Димон@KOMPUTER MINGW64 /e/GitBASCH_group_QA_30/group_30 (CheckLists)
+$ git commit  -m "чек лист"
+[CheckLists 27f63b3] чек лист
+ 1 file changed, 16 insertions(+)
+ create mode 100644 checklist.txt
+
+Димон@KOMPUTER MINGW64 /e/GitBASCH_group_QA_30/group_30 (CheckLists)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 717 bytes | 717.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/dimastiy30/group_30.git
+   cd544b1..27f63b3  CheckLists -> CheckLists
+
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+
+
+
+10. Синхронизировать Внешнюю и Локальную ветки Main
+
+Димон@KOMPUTER MINGW64 /e/GitBASCH_group_QA_30/group_30 (main)
+$ git fetch
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (2/2), 794 bytes | 7.00 KiB/s, done.
+From https://github.com/dimastiy30/group_30
+   c46e8f6..575d498  main       -> origin/main
+
+Димон@KOMPUTER MINGW64 /e/GitBASCH_group_QA_30/group_30 (main)
+$ git pull
+Updating c46e8f6..575d498
+Fast-forward
+ checklist.txt | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+ create mode 100644 checklist.txt
+
+
+Димон@KOMPUTER MINGW64 /e/GitBASCH_group_QA_30/group_30 (main)
+$ ls -la
+total 19
+drwxr-xr-x 1 Димон 197121    0 Jun 22 14:18 ./
+drwxr-xr-x 1 Димон 197121    0 Jun 19 20:36 ../
+drwxr-xr-x 1 Димон 197121    0 Jun 22 14:18 .git/
+-rw-r--r-- 1 Димон 197121   10 Jun 19 20:36 README.md
+-rw-r--r-- 1 Димон 197121  376 Jun 22 14:17 bagreport.txt
+-rw-r--r-- 1 Димон 197121 1257 Jun 22 14:18 checklist.txt
+-rw-r--r-- 1 Димон 197121   67 Jun 22 14:17 test.txt
+
